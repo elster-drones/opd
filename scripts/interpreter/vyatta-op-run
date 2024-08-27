@@ -40,7 +40,7 @@ _vyatta_op_init ()
     for cmd in $( /opt/vyatta/bin/opc -op children '' ); do
       for pos in $(seq 1 ${#cmd}); do
         case ${cmd:0:$pos} in
-          for|do|done|if|fi|case|while|tr )
+          for|do|done|if|fi|case|while|tr|set )
             continue ;;
           *) ;;
         esac
