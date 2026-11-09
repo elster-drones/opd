@@ -185,8 +185,8 @@ func openLogfile() {
 		return
 	}
 	defer f.Close()
-	syscall.Dup2(int(f.Fd()), 1)
-	syscall.Dup2(int(f.Fd()), 2)
+	syscall.Dup3(int(f.Fd()), 1, 0)
+	syscall.Dup3(int(f.Fd()), 2, 0)
 }
 
 func writePid() {
