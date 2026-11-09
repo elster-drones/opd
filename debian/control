@@ -7,7 +7,7 @@ Build-Depends:
  debhelper (>= 9.20160709) | dh-systemd,
  dh-golang (>= 1.18),
  dh-yang,
- golang (>=2:1.4),
+ golang:native,
  golang-github-danos-aaa-dev (>= 2.0),
  golang-github-danos-config-dev,
  golang-github-danos-mgmterror-dev,
